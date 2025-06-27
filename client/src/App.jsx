@@ -1,10 +1,21 @@
 import React from 'react'
 import Navbar from './components/Navbar'
+import MainBanner from './components/MainBanner'
+import { Route, Routes, useLocation } from 'react-router-dom'
+import Home from './pages/Home'
 
 function App() {
+
+  const isSeller = useLocation().pathname.includes("seller")
   return (
     <div>
-      <Navbar/>
+      {isSeller? null:<Navbar/>}
+      
+      <div className={`${isSeller?"":"px-6 md:px-16 lg:px-42 xl:px-32"}`}>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+        </Routes>
+      </div>
     </div>
   )
 }
