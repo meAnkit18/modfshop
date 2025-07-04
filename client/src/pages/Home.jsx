@@ -3,6 +3,8 @@ import MainBanner from '../components/MainBanner'
 import Categories from '../components/Categories'
 import BestSeller from '../components/BestSeller'
 import BottomBanner from '../components/BottomBanner'
+import NewsLatter from '../components/NewsLatter'
+import Footer from '../components/Footer'
 
 
 function Home() {
@@ -12,6 +14,8 @@ function Home() {
       <Categories/>
       <BestSeller/>
       <BottomBanner/>
+      <NewsLatter/>
+      
     </div>
   )
 }
